@@ -557,6 +557,6 @@ extension MaterialShowcase {
   // Gets all UIView from TabBarItem.
   func orderedTabBarItemViews(of tabBar: UITabBar) -> [UIView] {
     let interactionViews = tabBar.subviews.filter({$0.isUserInteractionEnabled})
-    return interactionViews.sorted(by: {$0.frame.minX < $1.frame.minX})
+    return interactionViews.sorted(by: {$0.tag < $1.tag})
   }
 }
